@@ -1,10 +1,10 @@
-import { createContext, useCallback, useState, useMemo, useContext } from "react";
+import { createContext, useCallback, useState, useMemo, useContext } from 'react';
 import { ThemeProvider } from '@emotion/react';
 
 
 
-import { DarkTheme, LightTheme } from "./../themes";
-import { Box } from '@mui/system'
+import { DarkTheme, LightTheme } from './../themes';
+import { Box } from '@mui/system';
 
 
 interface IThemeContextData {
@@ -14,12 +14,12 @@ interface IThemeContextData {
 
 
 
-const ThemeContext = createContext({} as IThemeContextData)
+const ThemeContext = createContext({} as IThemeContextData);
 
 
 export const useAppThemeContext = () => {
-    return useContext(ThemeContext)
-}
+  return useContext(ThemeContext);
+};
 
 
 
@@ -29,28 +29,28 @@ interface IAppThemeProviderProps{
 }
 
 export const AppThemeProvider: React.FC<IAppThemeProviderProps> = ({children}) => {
-    const [themeName, setThemeName] = useState<'light' | 'dark'>('light')
+  const [themeName, setThemeName] = useState<'light' | 'dark'>('light');
 
-const toggleTheme = useCallback(()=>{
-    setThemeName(oldThemeName => oldThemeName === 'light' ? 'dark' : 'light')
-}, [])
-
-
-const theme = useMemo(() => {
-    if (themeName === "light") return LightTheme
-
-    return DarkTheme
-}, [themeName])
+  const toggleTheme = useCallback(()=>{
+    setThemeName(oldThemeName => oldThemeName === 'light' ? 'dark' : 'light');
+  }, []);
 
 
+  const theme = useMemo(() => {
+    if (themeName === 'light') return LightTheme;
 
-    return (
-        <ThemeContext.Provider value={{themeName, toggleTheme}}>
-          <ThemeProvider theme={theme}>   
-             <Box width="100vW" height="100vh" bgcolor={theme.palette.background.default}>
-                {children}
-            </Box>
-           </ThemeProvider> 
-        </ThemeContext.Provider>
-    )
-}
+    return DarkTheme;
+  }, [themeName]);
+
+
+
+  return (
+    <ThemeContext.Provider value={{themeName, toggleTheme}}>
+      <ThemeProvider theme={theme}>   
+        <Box width="100vW" height="100vh" bgcolor={theme.palette.background.default}>
+          {children}
+        </Box>
+      </ThemeProvider> 
+    </ThemeContext.Provider>
+  );
+};
