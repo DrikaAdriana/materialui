@@ -1,3 +1,0 @@
-# Cadastros
-
-# npx eslint --fix .
