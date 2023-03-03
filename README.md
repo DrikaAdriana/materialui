@@ -1,3 +1,5 @@
 # Cadastros
 
-# npx eslint --fix .
+
+Comando para fazer a correção manual
+### npx eslint --fix .
