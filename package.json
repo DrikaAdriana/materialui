@@ -26,6 +26,7 @@
     "eslint": "^8.35.0",
     "eslint-plugin-react": "^7.32.2",
     "gh-pages": "^5.0.0",
+    "jason-server": "^3.0.0",
     "prettier": "^2.8.4",
     "typescript": "^4.5.4",
     "web-vitals": "^2.1.2"
