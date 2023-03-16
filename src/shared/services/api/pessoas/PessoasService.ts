@@ -50,7 +50,7 @@ const getAll = async ( page = 1, filter = '' ): Promise<TPessoasComTotalCount | 
 
 const getById = async (id: number): Promise<IDetalhePessoa | Error> => {
   try {
-    const { data } = await Api.get(`/pessoas/$${id}`);
+    const { data } = await Api.get(`/pessoas/${id}`);
     
     if (data) {
       return data;
