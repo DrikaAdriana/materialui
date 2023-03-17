@@ -32,10 +32,9 @@ export const VTextField: React.FC<TVTextFielProps> = ( {name, ...rest}) => {//va
       helperText={error}
       defaultValue={defaultValue}
 
-      onKeyDown={() => error ? clearError() : undefined}
-
       value={value}
-      onChange={e => setValue(e.target.value)}
+      onChange={e => { setValue(e.target.value); rest.onChange?.(e); }}
+      onKeyDown={(e) => { error && clearError(); rest.onKeyDown?.(e); }}
     />
   );
 };
