@@ -4,13 +4,13 @@
       "id": 3,
       "nomeCompleto": "Edu Silva Lemos Ramos",
       "email": "marcia@gmail.com",
-      "cidadeId": 1
+      "cidadeId": 5
     },
     {
       "id": 4,
+      "nomeCompleto": "Denise Silva",
       "email": "denise@gmail.com",
-      "cidadeId": 1,
-      "nomeCompleto": "Denise Silva"
+      "cidadeId": 4
     },
     {
       "id": 5,
@@ -21,8 +21,8 @@
     {
       "id": 7,
       "nomeCompleto": "Tonny Garrido",
-      "email": "Tonnygmail.com",
-      "cidadeId": 1
+      "email": "Tonnygmail@gmail.com",
+      "cidadeId": 5
     },
     {
       "id": 8,
@@ -103,16 +103,38 @@
       "nomeCompleto": "Jussara Medeiros"
     },
     {
-      "id": 21,
-      "nomeCompleto": "Vinicius de Souza",
-      "email": "vini@gmail.com",
-      "cidadeId": "4"
-    },
-    {
       "id": 22,
       "nomeCompleto": "Fernando Rodrigues Silva",
       "email": "fe@gmail.com",
       "cidadeId": "1"
+    },
+    {
+      "id": 23,
+      "nomeCompleto": "Katia Silva",
+      "email": "nmdrika@mail.com",
+      "cidadeId": 5
+    }
+  ],
+  "cidades": [
+    {
+      "id": 1,
+      "nome": "Porto Alegre"
+    },
+    {
+      "nome": "Novo Hamburgo",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "nome": "Rio de Janeiro"
+    },
+    {
+      "nome": "Ivoti",
+      "id": 4
+    },
+    {
+      "nome": "Dois Irmãos",
+      "id": 5
     }
   ]
 }
